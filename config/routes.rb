@@ -1,5 +1,18 @@
 Rails.application.routes.draw do
+  
+
+  get 'search/index'
+
+  get 'search/show'
+
   devise_for :users
+  resources :users, :only => [:show] do
+    resources :locations
+  end
+
+  root to: "users#show"
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
