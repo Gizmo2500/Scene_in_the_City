@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :locations
   end
 
-  root to: "users#show"
+  root to: 'search#index'
 
   
   # The priority is based upon order of creation: first created -> highest priority.
