@@ -7,9 +7,18 @@
   <%= submit_tag("Search") %>
 <% end %>
 
-<% @search.each do |x| %>
-	<h1><%= x["title"] %></h1>
-	<ul>
-	<li><%= x["locations"] %></li>
-</ul>
+	 <% movie = [] %>
+	 
+<% @search.each_with_index do |x,index| %>
+    
+        <% if index == 0 then%>
+            <h2><%= x["title"] %></h2>
+        <%end%>
+
+        <% if movie[index] != movie[index-1] then%>
+
+        <h1><%= x["title"] %></h1>
+        <%end%>
+        
+        <li><%= x["locations"] %></li>
 <% end %>
