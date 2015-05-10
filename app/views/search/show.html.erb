@@ -33,6 +33,8 @@
       //addresses start
 
     var addresses = ['Norway', 'Africa', 'Asia','North America','South America'];
+    var target = []; 
+    var bounds = new google.maps.LatLngBounds();
 
     for (var x = 0; x < addresses.length; x++) {
         $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&sensor=false', null, function (data) {
@@ -41,19 +43,31 @@
             
             var latlng = new google.maps.LatLng(p.lat, p.lng);
             
-            console.log(latlng) 
-            new google.maps.Marker({
+            
+            var ninja = new google.maps.Marker({
                 position: latlng,
                 map: map
-            }); 
+            });
+            console.log(ninja.position); 
+            target.push(ninja); 
+            console.log(target); 
+            
+            bounds.extend(latlng);
+            map.fitBounds(bounds);
+            console.log(bounds)
+
 
         });
+        
     }
-
 
 
     //end of addresses 
     
+    
+    if(map.getZoom()> 15){
+      map.setZoom(15);
+    }  
       }
 
 
