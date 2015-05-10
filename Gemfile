@@ -29,6 +29,9 @@ gem 'devise'
 # paperclip for adding images
 gem "paperclip", "~> 4.2"
 
+# pundit for user authorization
+gem "pundit"
+
 # Typhoeus to grab api data
 gem 'typhoeus'
 

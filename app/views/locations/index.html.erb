@@ -19,9 +19,9 @@
         <td><%= location.movie %></td>
         <td><%= location.location %></td>
         <td><%= image_tag location.image.url(:thumb) %></td>
-        <td><%= link_to 'Show', location %></td>
-          <td><%= link_to 'Edit', edit_location_path(location) %></td>
-          <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', location if policy(location).show? %></td>
+          <td><%= link_to 'Edit', edit_location_path(location) if policy(location).edit? %></td>
+          <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } if policy(location).destroy? %></td>
       </tr>
     <% end %>
   </tbody>
