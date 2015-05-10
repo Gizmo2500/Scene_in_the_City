@@ -23,8 +23,11 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# devise for user authentication and authorization
+# devise for user authentication
 gem 'devise'
+
+# paperclip for adding images
+gem "paperclip", "~> 4.2"
 
 # Typhoeus to grab api data
 gem 'typhoeus'
