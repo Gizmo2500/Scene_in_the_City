@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   get 'search/show'
 
   devise_for :users
+  
   resources :locations
+  resources :users
 
 
   root to: 'search#index'
