@@ -71,9 +71,9 @@ var movi3s = [{value: "Big Trouble in Little China"},{value: "Ant-Man"},{ value:
             var title = document.getElementById("t").innerText; 
 
             var contentString = '<div id="content">'+
-            '<h1>'+ title +'</h1><br>'+
+            '<h2>'+ title +'</h2><br>'+
             addresses[k]+
-            '<br>'+
+            '<br><br><br>'+
             '<button>Save location</button>'
             '</div>';
             //ADD6 END
