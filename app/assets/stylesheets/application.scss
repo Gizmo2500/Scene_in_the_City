@@ -44,15 +44,34 @@ body{
 text-align: center;
 }
 
+.background {
+  background: rgba(128,0,0,.6);
+  padding: 16px 10;
+  color: #fff; 
+  display: inline;
+  margin: 0; 
+}
+
+.field {
+	position: relative;
+}
+
+.links {
+  color: #fff;
+  background: maroon;
+  display: inline;
+  margin: 0; 
+	}
+
 .container {
 
 	
 	background: $white_opaque;
-	margin: 3em auto 0 auto;
+
 	border-radius: 7px;
 	-webkit-box-shadow: 0 0 4px 3px rgba(0,0,0,.3);
 	box-shadow: 0 0 4px 4px rgba(0,0,0,.03);
-	padding: 1em 0;
+	padding: 11em 0;
 	width: 640px; 
     height: auto;
     margin: 0 auto;
@@ -63,13 +82,9 @@ text-align: center;
 	font-weight: 700;
 	font-size: 2.5rem;
 	text-transform: uppercase;
-	color: #02D1D1;
+	color: $dark;
 	margin: 0;
 	font-family: 'Fjalla One', sans-serif;
-	text-align: center;
-	border-right: 3px solid rgba(250,250,250, .3);
-	padding: 2em 0;
-	top: +60px;
 }
 
 .sub_title {
@@ -95,11 +110,11 @@ label {
 	color: $dark;
 }
 input[type="text"], textarea {
-	width: 100%;
+	width: 35%;
 	margin: .5em 2% 1em 0;
 	display: inline-block;
 	outline: none;
-	background: rgba(250,250,250,.4);
+	background: rgba(128,0,0,.6);
 	border: none;
 	height: 40px;
 	border-radius: 4px;
@@ -123,5 +138,9 @@ input[type="submit"] {
 		background: $dark;
 		color: white;
 	}
+}
+
+.imgs {
+	margin-left: 420px;
 }
 ::-webkit-input-placeholder { color: $dark; }

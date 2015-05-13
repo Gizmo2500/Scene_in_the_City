@@ -1,14 +1,11 @@
 <p id="notice"><%= notice %></p>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 
-<%= image_tag @location.image.url(:medium) %>
+<%= image_tag @location.image.url(:large) %>
 
-<p>
-  <strong>Movie:</strong>
-  <%= @location.movie %>
-</p>
 
-<p>
-  <strong>Locations:</strong>
+<p class="title">
+  <strong>Location:</strong>
   <%= @location.location %>
 </p>
 

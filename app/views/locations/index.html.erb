@@ -1,13 +1,11 @@
 <p id="notice"><%= notice %></p>
 <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-<h1 class="title">Favorite Locations</h1>
+<h1 class="background">Favorite Locations</h1>
 
 <table>
   <thead class= "index_row clearfix">
     <tr>
-      <th class="title">User</th>
-      <th class="title">Movie</th>
-      <th class="title">Locations</th>
+      <th class="title">Location:</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,11 +13,9 @@
   <tbody>
     <% @locations.each do |location| %>
       <tr>
-        <td class="sub_title"><%= location.user.email %></td>
-        <td class="sub_title"><%= location.movie %></td>
         <td class="sub_title"><%= location.location %></td>
-        <td><%= image_tag location.image.url(:thumb) %></td>
-        <td class="links">
+        <td><%= image_tag location.image.url(:medium) %></td>
+        <td class="sub_title">
         <%= link_to 'Show', location if policy(location).show? %>
         <%= link_to 'Edit', edit_location_path(location) if policy(location).edit? %>
         <%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } if policy(location).destroy? %>
@@ -31,4 +27,4 @@
 
 <br>
 
-<%= link_to 'Create New Favorite', new_location_path %>
+<div class="sub_title"><%= link_to 'Create New Favorite', new_location_path %></div>
