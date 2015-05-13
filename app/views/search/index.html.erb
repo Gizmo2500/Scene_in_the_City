@@ -4,13 +4,11 @@
     <style type="text/css">
       html, body, #map-canvas { height: 95%; margin: 50px; padding: 30px;}
     </style>
-
-    <script type="text/javascript"
-
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMWYZQ_-CVeRxA719M3pveepUJS105TOU">
-
-    </script>
-    
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdg8HS-G4Xg_eo7LfmT8Z7mO6EFarQxDk"></script>
+    <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+    <script src="YourJquery source path"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
   </head>
 
   <body>
@@ -29,16 +27,16 @@
 <% @search.each_with_index do |x,index| %>
       <% @movie.push(x["title"]) %>
       <% @location.push(x["locations"]) %>
+
+      
      
-
-
         <% if index == 0 then%>
-            <h2><%= x["title"] %></h2>
+            <h2 id = "t"><%= x["title"] %></h2>
         <%end%>
 
         <% if @movie[index] != @movie[index-1] then%>
 
-        <h1><%= x["title"] %></h1>
+        <h1 id = "t"><%= x["title"] %></h1>
         <%end%>
         <div class = "loKos">
         <li><%= x["locations"] %></li>
@@ -50,12 +48,6 @@
 
  <%= javascript_include_tag 'maps'%>
 <br>
-<%=@location %> 
 
-<br>
-
-
-
-<div id="map-canvas"></div>
   </body>
 </html>
