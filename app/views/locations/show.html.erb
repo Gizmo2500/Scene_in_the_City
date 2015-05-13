@@ -1,2 +1,16 @@
-<h1>Locations#show</h1>
-<p>Find me in app/views/locations/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<%= image_tag @location.image.url(:medium) %>
+
+<p>
+  <strong>Movie:</strong>
+  <%= @location.movie %>
+</p>
+
+<p>
+  <strong>Locations:</strong>
+  <%= @location.location %>
+</p>
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>
