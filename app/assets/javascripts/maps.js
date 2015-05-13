@@ -13,7 +13,7 @@ var movi3s = [{value: "Big Trouble in Little China"},{value: "Ant-Man"},{ value:
     var arra = []; 
 
     for ( var i = 0; i< x.length; i++){
-      arra.push(x[i].innerText);   
+      arra.push(x[i].innerText.replace(/^/,' San Francisco, CA '));   
     }; 
 
     //xxx
@@ -51,7 +51,7 @@ var movi3s = [{value: "Big Trouble in Little China"},{value: "Ant-Man"},{ value:
         for (var w = 0; w < addresses.length; w++) {
           (function(k){
           setTimeout(function(){
-            $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[k]+'&components=administrative_area:San+Francisco|country:US&sensor=false', null, function (data) {
+            $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[k]+'&components=administrative_area:San+Francisco&sensor=false', null, function (data) {
                 $(document).delay(1000);   
                 setTimeout(function(){
                 
@@ -65,15 +65,14 @@ var movi3s = [{value: "Big Trouble in Little China"},{value: "Ant-Man"},{ value:
                 });             
                 //ADD 6: info window contents
 
-                var title;
-                var displayAddress = addresses[k]; 
+                
+            
                             
-            title = document.getElementById("t").innerText; 
-            console.log(title);   
+            var title = document.getElementById("t").innerText; 
 
             var contentString = '<div id="content">'+
-            '<h4>'+ title +'</h4><br>'+ 'Shooting Location: '+
-            displayAddress+
+            '<h1>'+ title +'</h1><br>'+
+            addresses[k]+
             '<br>'+
             '<button>Save location</button>'
             '</div>';
@@ -85,25 +84,26 @@ var movi3s = [{value: "Big Trouble in Little China"},{value: "Ant-Man"},{ value:
             });
             //ADD4 END
 
-            // ADD 5: add click event to marker
+            //ADD 5: add click event to marker
+            
+            
             google.maps.event.addListener(ninja, 'click', function() {
 
               infowindow.open(map,ninja);
-
-              $('')
-
-              $.ajax({
-                      success:function () {
-                      infowindow.setContent(addresses[k]);
-                     }
-               });
-            });
-            google.maps.event.addListener(ninja, 'mouseover', function() {
-              infowindow.open(map,ninja);
-            });
-              google.maps.event.addListener(ninja, 'mouseout', function() {
-              infowindow.close(map,ninja);
-            });
+            }); 
+              
+            //   $.ajax({
+            //           success:function () {
+            //           infowindow.setContent(addresses[k]);
+            //          }
+            //    });
+            // });
+            // google.maps.event.addListener(ninja, 'mouseover', function() {
+            //   infowindow.open(map,ninja);
+            // });
+            //   google.maps.event.addListener(ninja, 'mouseout', function() {
+            //   infowindow.close(map,ninja);
+            // });
 
             // ADD5 END 
            
