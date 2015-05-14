@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   get 'search/show'
 
+  get 'locations/new', as: 'New' 
+
+  post'locations/index'
+
   devise_for :users
   
   resources :locations

@@ -26,7 +26,11 @@ class LocationsController < ApplicationController
 
   # POST /locations
   # POST /locations.json
+  
   def create
+
+    
+    
     @location = current_user.locations.build(location_params)
 
     respond_to do |format|

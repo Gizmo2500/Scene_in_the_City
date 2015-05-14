@@ -70,9 +70,11 @@ $(window).load(function(){
               '<h2>'+ title +'</h2><br>'+
               addresses[w]+
               '<br><br><br>'+
-              '<button>Save location</button>'
+              //'<button id="fav'+p.lat.toString().split(".")[1]+'" class="button">Save location</button>'
               '</div>';
-            
+               
+              // var b = contentString.find('button.blue')[0]; 
+              // console.log(b); 
               // Create new info window
               var infowindow = new google.maps.InfoWindow({
               content: contentString
@@ -82,6 +84,30 @@ $(window).load(function(){
             google.maps.event.addListener(ninja, 'click', function() {
               infowindow.open(map,ninja);
             }); 
+            //console.log(infowindow.content);
+
+            // $(document).click(function() {
+
+            //   if($(event.target).hasClass("button")){
+            // $.ajax({
+            //   type:     "GET", 
+            //   url:      "/locations/new",
+            //   dataType: "script"
+            // });
+               
+
+                
+            //     // $.post("/locations/index.json", {
+            //     //   location:{
+            //     //     title: title,
+            //     //     location: addresses[w]
+            //     //   }
+                
+            //    // db.locations.create(movie: title, location: latlng); 
+            //    };  
+
+            //     console.log("hellohelloehelloefhefleelkffoefefknoenen"); 
+            //   }); 
 
             // other options to have google map tags do things on mouseover and mouseout 
               
@@ -112,9 +138,17 @@ $(window).load(function(){
 
     }; // close map initialization function
 
+          
+
   }); //close $document(ready) 
+
 }); // close $(window).load
 
+setTimeout(function(){   
+$("#map-canvas").click(function() {
+console.log($("#map-canvas").find("button"));
+})
+}, 2000)
 
 
        
