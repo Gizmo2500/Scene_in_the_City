@@ -36,6 +36,8 @@ gem "paperclip", "~> 4.2"
 # pundit for user authorization
 gem "pundit"
 
+gem "sprockets"
+
 group :production, :test do
 
 gem 'rails_12factor'
