@@ -1,0 +1,181 @@
+/* line 5, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/site.scss */
+.about_pics {
+  height: 300px;
+  width: 200px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+/* line 21, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+#notice {
+  text-align: center;
+  font-size: 0.6em;
+  color: #700000;
+  font-weight: 100;
+}
+
+/* line 29, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+body {
+  text-align: center;
+}
+
+/* line 33, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+h2 {
+  font-family: 'Fjalla One', sans-serif;
+  color: #700000;
+}
+
+/* line 39, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+li {
+  list-style-type: none;
+  color: white;
+}
+
+/* line 44, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+.about_pic {
+  padding-top: 40px;
+}
+
+/* line 49, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+.about_name {
+  font-family: 'Fjalla One', sans-serif;
+  color: #700000;
+}
+
+/* line 54, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+.about_name a {
+  color: #700000;
+}
+
+/* line 58, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+.background {
+  font-family: 'Fjalla One', sans-serif;
+  padding: 16px 10;
+  color: white;
+  display: inline;
+  margin: 0;
+}
+
+/* line 66, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+.edit_options li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #700000;
+}
+
+/* line 72, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+.edit_options li a:hover {
+  text-decoration: underline;
+}
+
+/* line 76, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+.fav_img {
+  padding-top: 40px;
+}
+
+/* line 80, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+.field {
+  position: relative;
+}
+
+/* line 84, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+.container {
+  background: rgba(250, 250, 250, 0.3);
+  border-radius: 7px;
+  -webkit-box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.03);
+}
+
+/* line 92, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+.results_list {
+  background-color: rgba(128, 0, 0, 0.6);
+  width: 60%;
+  margin: auto;
+  padding: 10px;
+}
+
+/* line 99, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+.positions {
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* THIS IS USER PROFILE PAGE STYLING */
+/* line 106, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+.title {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 2.5rem;
+  color: #700000;
+  text-transform: uppercase;
+}
+
+/* line 113, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+.sub_title {
+  color: #700000;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+  padding-top: 30px;
+  text-align: center;
+}
+
+/* */
+/* line 124, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+input[type="text"], textarea {
+  width: 35%;
+  color: white;
+  margin: .5em 2% 1em 0;
+  display: inline-block;
+  outline: none;
+  background: rgba(128, 0, 0, 0.6);
+  border: none;
+  height: 40px;
+  border-radius: 4px;
+  padding: 1em 2em;
+}
+
+/* line 137, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+textarea {
+  height: 200px;
+}
+
+/* line 141, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+input[type="submit"] {
+  background: white;
+  outline: none;
+  border: none;
+  height: 40px;
+  border-radius: 4px;
+  width: 25%;
+  display: inline-block;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+  color: #700000;
+}
+/* line 152, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+input[type="submit"]:hover {
+  background: #700000;
+  color: white;
+}
+
+/* line 158, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+.imgs {
+  margin-left: 45%;
+}
+
+/* line 161, /Users/Trebek/code/Rails/Scene_in_the_City/Scene_Base/Scene_in_the_City/app/assets/stylesheets/application.scss */
+::-webkit-input-placeholder {
+  color: #700000;
+}
