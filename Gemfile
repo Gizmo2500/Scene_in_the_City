@@ -29,7 +29,6 @@ gem 'devise'
 # Typhoeus to grab api data
 gem 'typhoeus'
 
-gem 'pg'
 
 # paperclip for adding images
 gem "paperclip", "~> 4.2"
@@ -55,7 +54,7 @@ end
 
 group :development, :test do
 
-	gem 'rails_12factor'
+	
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
