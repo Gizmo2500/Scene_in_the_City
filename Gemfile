@@ -28,7 +28,7 @@ gem 'devise'
 
 # Typhoeus to grab api data
 gem 'typhoeus'
-
+gem 'jquery-turbolinks'
 
 # paperclip for adding images
 gem "paperclip", "~> 4.2"
