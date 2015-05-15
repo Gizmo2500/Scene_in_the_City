@@ -16,22 +16,6 @@
  $white_opaque: rgba(250, 250, 250, .3);
  $dark: #700000;
 
-* {
-	box-sizing: border-box;
-}
-html {
-  height: 100%;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
 
 #notice {
 	text-align: center;
@@ -40,77 +24,105 @@ html {
 	font-weight: 100;
 }
 
-body{
-text-align: center;
+
+body {
+	text-align: center;
+}
+
+h2 {
+	font-family: 'Fjalla One', sans-serif;
+	color: $dark;
+}
+
+
+li {
+	list-style-type: none;
+	color: white;
+}
+
+.about_pic {
+	padding-top: 40px;
+
+}
+
+.about_name {
+	font-family: 'Fjalla One', sans-serif;
+	color: $dark;
+}
+
+.about_name a {
+	color: $dark;
 }
 
 .background {
-  background: rgba(128,0,0,.6);
+  font-family: 'Fjalla One', sans-serif;
   padding: 16px 10;
-  color: #fff; 
+  color: white; 
   display: inline;
   margin: 0; 
 }
+
+.edit_options li a {
+	display: inline-block;
+	text-decoration: none;
+	color: $dark;
+}
+
+.edit_options li a:hover {
+    text-decoration: underline;
+}
+
+.fav_img {
+	padding-top: 40px;
+} 
 
 .field {
 	position: relative;
 }
 
-.links {
-  color: #fff;
-  background: maroon;
-  display: inline;
-  margin: 0; 
-	}
-
 .container {
-
 	
 	background: $white_opaque;
-
 	border-radius: 7px;
 	-webkit-box-shadow: 0 0 4px 3px rgba(0,0,0,.3);
-	box-shadow: 0 0 4px 4px rgba(0,0,0,.03);
-	padding: 11em 0;
-	width: 640px; 
-    height: auto;
-    margin: 0 auto;
-    position: relative;
+	box-shadow: 0 0 4px 4px rgba(0,0,0,.03); 
 }
 
+.results_list {
+	background-color: rgba(128,0,0,.6);
+	width: 60%;
+	margin: auto;
+	padding: 10px;
+}
+
+.positions {
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* THIS IS USER PROFILE PAGE STYLING */
+
 .title {
-	font-weight: 700;
-	font-size: 2.5rem;
-	text-transform: uppercase;
-	color: $dark;
-	margin: 0;
 	font-family: 'Fjalla One', sans-serif;
+	font-size: 2.5rem;
+	color: $dark;
+	text-transform: uppercase;
 }
 
 .sub_title {
-	margin: 0 0 3em 0;
-	text-align: center;
-	font-size: 0.9em;
 	color: $dark;
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 1em;
 	font-weight: 100;
+	padding-top: 30px;
+	text-align: center;
 }
 
-.index_row {
-	padding: 2em;
-	border-bottom: 1px solid rgba(250,250,250, .3);
-	.sub_title {
-		margin-bottom: 0;
-	}
-}
+/* */
 
-.forms {
-	padding: 0 5%;
-}
-label {
-	color: $dark;
-}
 input[type="text"], textarea {
 	width: 35%;
+	color: white;
 	margin: .5em 2% 1em 0;
 	display: inline-block;
 	outline: none;
@@ -120,9 +132,11 @@ input[type="text"], textarea {
 	border-radius: 4px;
 	padding: 1em 2em;
 }
+
 textarea {
 	height: 200px;
 }
+
 input[type="submit"] {
 	background: white;
 	outline: none;
@@ -141,6 +155,15 @@ input[type="submit"] {
 }
 
 .imgs {
-	margin-left: 420px;
+	margin-left: 45%;
 }
 ::-webkit-input-placeholder { color: $dark; }
+
+@media (max-width: 700px) { 
+	
+}
+
+
+
+
+

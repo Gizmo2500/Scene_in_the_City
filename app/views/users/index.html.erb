@@ -1,17 +1,17 @@
-<h1 class="background">Welcome Home</h1>
+<h1 class="about_name">Welcome Home</h1>
 
-<%= link_to 'Favorite Locations', locations_path %>
+<div class="about_name" class="sub_title"><%= link_to 'Create New Favorite', new_location_path %></div>
 
 
-
-<tbody>
     <% @location.each do |location| %>
-      <tr>
-
-        <td><%= image_tag location.image.url(:large) %></td>
-        <td><%= link_to 'Show', location if policy(location).show? %></td>
-          <td><%= link_to 'Edit', edit_location_path(location) if policy(location).edit? %></td>
-          <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } if policy(location).destroy? %></td>
-      </tr>
+      
+        <li class="fav_img"><%= image_tag location.image.url(:large) %></li><br>
+        
+        <div class="edit_options">
+	        <li class="about_name"><%= link_to 'Show', location if policy(location).show? %></li><br>
+	        <li class="about_name"><%= link_to 'Edit', edit_location_path(location) if policy(location).edit? %></li><br>
+	        <li class="about_name"><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } if policy(location).destroy? %></li>
+     
+  		</div>
     <% end %>
-  </tbody>
+  

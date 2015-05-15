@@ -1,7 +1,5 @@
-<p id="notice"><%= notice %></p>
-<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 
-<%= image_tag @location.image.url(:large) %>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 
 
 <p class="title">
@@ -9,5 +7,7 @@
   <%= @location.location %>
 </p>
 
+<%= image_tag @location.image.url(:large) %> </br>
+
 <%= link_to 'Edit', edit_location_path(@location) %> |
-<%= link_to 'Back', locations_path %>
+<%= link_to 'Back', users_path %>

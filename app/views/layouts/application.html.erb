@@ -7,14 +7,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 	 <title>SceneInTheCity</title>
+	 <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 	 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	 <%= csrf_meta_tags %>
 	<link rel="stylesheet" href="/stylesheets/style.css">
             <!-- Latest compiled and minified CSS -->
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-			<!-- font awesome -->
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 <body style="background:url(/assets/cover.jpg) no-repeat center center fixed;background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;font-family:Ubuntu;font-size:16px;padding-top:150px;">
 
@@ -28,12 +28,13 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
-					<img src="/assets/logo_1.png" href="/users" class="img-responsive" style="height:60px;">
+					<a href="/"><img src="/assets/logo_1.png" class="img-responsive" style="height:60px;"></a>
 					</div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
+							<li><%= link_to "About Us", '/site/index' %></li>
 							<% if user_signed_in? %>
 				  				<li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
 							<% else %>
@@ -51,7 +52,7 @@
   <%= yield %>
 </div>
 
-<div id="map-canvas"></div>
+
 
 </body>
 					<p class="notice"><%= notice %></p>

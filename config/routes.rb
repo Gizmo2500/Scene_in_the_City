@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   
-
   get 'search/index'
 
   get 'search/show'
+
+  get 'site/index', as: 'about'
 
   devise_for :users
   

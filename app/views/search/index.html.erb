@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <style type="text/css">
-      html, body, #map-canvas { height: 95%; margin: 50px; padding: 30px;}
+      html, body, #map-canvas { height: 500px; }
     </style>
-    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdg8HS-G4Xg_eo7LfmT8Z7mO6EFarQxDk"></script>
     <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
     <link rel="stylesheet" href="/stylesheets/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <script src="YourJquery source path"></script>
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
 
-  </head>
+</head>
+
+<body>
 
 
-  <body>
+<h1 class="about_name">Discover San Francisco's movie and tv-series locations:</h1>  
+
+  <%= form_tag("/search/index", method: "get") do %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+
+  <div id="map-canvas"></div> 
+  <br>
+  <br>
+
+  <div class="results_list">  
+
+  <% @search.each_with_index do |x,index| %>
+    <% @movie.push(x["title"]) %>
+    <% @location.push(x["locations"]) %>
+
+  
+    <% if index == 0 then%>
+      <h2 class="background" id = "t"><%= x["title"] %></h2>
+    <%end%>
+    <% if @movie[index] != @movie[index-1] then%>
+      <h1 class="background" id = "t"><%= x["title"] %></h1>
+    <%end%>
+    <div class = "loKos">
+      <li class="background"><%= x["locations"] %></li>
+    </div>        
+    <% end %>
+  
+  </div>
 
 
-<%= form_tag("/search/index", method: "get") do %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
-<% end %>
-
-   
-
-<% @search.each_with_index do |x,index| %>
-      <% @movie.push(x["title"]) %>
-      <% @location.push(x["locations"]) %>
-
-      
-     
-        <% if index == 0 then%>
-            <h2 class="background" id = "t"><%= x["title"] %></h2>
-        <%end%>
-
-        <% if @movie[index] != @movie[index-1] then%>
-
-        <h1 class="background" id = "t"><%= x["title"] %></h1>
-        <%end%>
-        <div class = "loKos">
-        <li class="background"><%= x["locations"] %></li>
-        </div> 
-        
-<% end %>
-
-
-
- <%= javascript_include_tag 'maps'%>
-<br>
-
-  </body>
+   <%= javascript_include_tag 'maps'%>
+  <br>
+  <button> <a href="/locations/new">Add a Location to Favorites</a> </button>
+  <br>
+</body>
 </html>
