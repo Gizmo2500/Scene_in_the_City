@@ -25,7 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # devise for user authentication and authorization
 gem 'devise'
-
+gem 'jquery-turbolinks'
 # Typhoeus to grab api data
 gem 'typhoeus'
 
