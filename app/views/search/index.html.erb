@@ -18,8 +18,8 @@
 <h1 class="about_name">Discover San Francisco's movie and tv-series locations:</h1>  
 
   <%= form_tag("/search/index", method: "get") do %>
-    <%= text_field_tag(:q) %>
-    <%= submit_tag("Search") %>
+    <%= text_field_tag :q , nil, :placeholder => 'Enter a movie that was filmed in the city' %>
+    <%= submit_tag ("Search")  %>
   <% end %>
 
   <div id="map-canvas"></div> 
