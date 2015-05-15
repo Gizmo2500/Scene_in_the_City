@@ -40,7 +40,7 @@ gem "pundit"
 group :production, :test do
 
 gem 'rails_12factor'
-
+gem 'pg'
 end 
 
 
