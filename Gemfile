@@ -25,7 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # devise for user authentication and authorization
 gem 'devise'
-gem 'jquery-turbolinks'
+
 # Typhoeus to grab api data
 gem 'typhoeus'
 
@@ -40,7 +40,7 @@ group :production, :test do
 
 gem 'rails_12factor'
 gem 'pg'
-
+gem 'jquery-turbolinks'
 
 end 
 
