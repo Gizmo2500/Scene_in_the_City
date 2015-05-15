@@ -37,6 +37,11 @@ gem "paperclip", "~> 4.2"
 # pundit for user authorization
 gem "pundit"
 
+group :production, :test do
+
+gem 'rails_12factor'
+
+end 
 
 
 # Use ActiveModel has_secure_password
@@ -50,7 +55,7 @@ gem "pundit"
 
 group :development, :test do
 
-  gem 'rails_12factor'
+	gem 'rails_12factor'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
