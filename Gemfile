@@ -35,6 +35,7 @@ gem "paperclip", "~> 4.2"
 
 # pundit for user authorization
 gem "pundit"
+gem "factory_girl_rails"
 
 gem "sprockets"
 

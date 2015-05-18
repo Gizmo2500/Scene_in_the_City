@@ -13,6 +13,7 @@ Rails.application.configure do
   config.serve_static_assets = true
   config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
   config.assets.compile = true
+  
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
