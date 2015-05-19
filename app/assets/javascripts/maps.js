@@ -66,7 +66,8 @@ $('[data-toggle="popover"]').popover();
               //Grab the title from the page to pass into the marker                
 
               var title = document.getElementById("t").innerText; 
-              // structure the information in the marker 
+              
+              // structure the information in  popup window 
 
               var contentString = '<div id="content">'+
               '<h2>'+ title +'</h2><br>'+
@@ -75,7 +76,7 @@ $('[data-toggle="popover"]').popover();
     
               '</div>';
             
-              // Create new info window
+              // Create new info window - Popup with street location and the title of the movie 
               var infowindow = new google.maps.InfoWindow({
               content: contentString
             });
@@ -102,10 +103,10 @@ $('[data-toggle="popover"]').popover();
            // after the marker is added, extend the bounds so that it is included in the window
             bounds.extend(latlng);
             map.fitBounds(bounds);
-          }, 1000);// close settimeout2
+           }, 1000);// close settimeout2
 
          }); // close get.JSON
-            }, 1000)
+        }, 1000)
         })(w); // close settimeout1
       } // close addresses for loop
 
