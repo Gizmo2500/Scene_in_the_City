@@ -63,6 +63,8 @@ $('[data-toggle="popover"]').popover();
                   map: map,
                   icon: '/images/marker30.png'
               });            
+              
+              //describing the popup window 
               //Grab the title from the page to pass into the marker                
 
               var title = document.getElementById("t").innerText; 
