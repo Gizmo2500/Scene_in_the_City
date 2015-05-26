@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>About Us</title>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 
-</head>
-<body>
-	
 			<h2 class='about_name'>About us:</h2>
 			<h4 class='about_name'>Click on the image to see contributions</h4>
-			
-				<img src='<%= asset_path('alex.png') %>' data-toggle="popover" data-placement="right" data-content="Project Manager: Organized and outlined project in advance which led to completion of MVP by COB Day 1.GIT Lead: Updated Github Repository to safely move updates from individual branches to the final project branch. Google Maps API v3 Engineer: Used google maps documentation to render a google map and place markers on the map using javascript in a rails environment. Ex-Banker, Math Major, 5.0 Tennis Player." class='about_pic'/>
+					<script>
+						$(document).ready(function(){
+    					$('[data-toggle="popover"]').popover(); 
+						});
+					</script>
+				
+				<img src='<%= asset_path('alex.png') %>' data-toggle= "popover" data-trigger= 'click' data-placement="right" data-content="Project Manager: Organized and outlined project in advance which led to completion of MVP by COB Day 1.GIT Lead: Updated Github Repository to safely move updates from individual branches to the final project branch. Google Maps API v3 Engineer: Used google maps documentation to render a google map and place markers on the map using javascript in a rails environment. Ex-Banker, Math Major, 5.0 Tennis Player." class='about_pic'/>
 				<h2 class='about_name'>Alex Trzeciak</h2>
 				<p class='positions'>Project Manager, API Integration</p>
 
@@ -28,5 +23,3 @@
 				<h2 class='about_name'>David Spencer</h2>
 				<p class='positions'>Back-end, Authentication</p>
 			
-</body>
-</html>
